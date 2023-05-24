@@ -1,4 +1,4 @@
-# Dashboard Mobile Application
+# Pipetteerrobot
  
 We will use GIT for the version control of our project, this will make it possible to develop with other developers on the same project and be able to combine the result of our changes.
 
