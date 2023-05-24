@@ -39,7 +39,7 @@ The commit message should be structured as follows;
 | Element | Explanation | Examples |
 | ------ | ------ | ------ |
 | **\<type>** | What type of change has this made to the app. | - ```fix```: e.g. a bug fix. <br> - ```feat:``` a new feature that has been added. <br> - ```minor```: a change to an existing feature. <br> - ```import```: added new content to the project. |
-| **\<issue>** | The issue where the need for this change is from. This number can be gotten from the issue you’re currently working on. | - ```PIPET-22``` <br> - ```PIPET-35``` <br> - ```TJALK-22: Create technical design document.``` |
+| **\<issue>** | The issue where the need for this change is from. This number can be gotten from the issue you’re currently working on. | - ```PIPET-22``` <br> - ```PIPET-35``` <br> - ```PIPET-22: Create technical design document.``` |
 | **[description]** | Small explanation of what changed in this commit. This should make sense based on the ```<type>```. Generally these should be 1 sentence. If it’s more think about describing it in the ```[body]``` | ```Fixed bug where the data wouldn't update if in the Bilge screen.``` <br> <br> ```Introduced feature to display last time since Engine start.``` |
 | **[body]** | Large explanation of the change, these will be most appropriate for big changes. This will be most common for ```feat``` type commits. Generally these should be 2 or more sentences. | ```Setup structure from the UML, this includes systems for the Data graphs generation back-end and front end. Art has been added for this as well with applied settings.``` |
 | **(optional)** | A tag for other elements that describes whether they are mandatory in the commit structure | ```[body(optional)]``` |
