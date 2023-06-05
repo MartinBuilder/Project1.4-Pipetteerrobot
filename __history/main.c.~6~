@@ -21,4 +21,5 @@ void main()
       output_bit( PIN_C2, 1);     
       output_bit( PIN_C3, 1);
    }
+
 }
