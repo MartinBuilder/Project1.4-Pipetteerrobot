@@ -19,12 +19,12 @@ void main()
       HoeVaakGedrukt++;
       if(HoeVaakGedrukt == 1)
       {
-         output_b(16);
+         output_b(16)
          // voer functie prep uit
       }
       if(HoeVaakGedrukt == 2)
       {
-         output_b(25);
+         output_b(25)
          // voer functie hoofprogramma uit
       HoeVaakGedrukt = 0;
       }

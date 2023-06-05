@@ -1,4 +1,4 @@
-Compiling C:\Users\marti\Documents\CCS\Project1.4-Pipetteerrobot\main on 02-Jun-23 at 13:05
+Compiling C:\Users\koens\Downloads\Project 1.4 programma\Project1.4-Pipetteerrobot\main on 05-jun-23 at 16:24
 >>> Warning 225 "C:\Program Files (x86)\PICCDEMO\Devices\16F877A.h" Line 74(15,19): Duplicate #define
 >>> Warning 225 "C:\Program Files (x86)\PICCDEMO\Devices\16F877A.h" Line 75(15,19): Duplicate #define
 >>> Warning 225 "C:\Program Files (x86)\PICCDEMO\Devices\16F877A.h" Line 76(15,19): Duplicate #define
@@ -212,8 +212,6 @@ Compiling C:\Users\marti\Documents\CCS\Project1.4-Pipetteerrobot\main on 02-Jun-
 >>> Warning 225 "C:\Program Files (x86)\PICCDEMO\Devices\16F877A.h" Line 703(19,43): Duplicate #define
 >>> Warning 225 "C:\Program Files (x86)\PICCDEMO\Devices\16F877A.h" Line 704(19,43): Duplicate #define
 >>> Warning 225 "C:\Program Files (x86)\PICCDEMO\Devices\16F877A.h" Line 705(17,43): Duplicate #define
->>> Warning 202 "C:\Users\marti\Documents\CCS\Project1.4-Pipetteerrobot\main.c" Line 5(5,9): Variable never used:   outs
->>> Warning 202 "C:\Users\marti\Documents\CCS\Project1.4-Pipetteerrobot\main.c" Line 6(6,11): Variable never used:   delay
-      Memory usage:   ROM=1%      RAM=3% - 3%
-      0 Errors,  215 Warnings.
+      Memory usage:   ROM=1%      RAM=2% - 2%
+      0 Errors,  213 Warnings.
 Build Successful.

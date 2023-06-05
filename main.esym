@@ -1,9 +1,9 @@
-D G "__PCM__" 0 27 ""5.115d""
-D G "__DEVICE__" 0 27 "877"
-D G "__DATE__" 0 27 ""02-Jun-23""
-D G "__TIME__" 0 27 ""13:05:56""
-D G "_UNICODE" 0 27 ""?""
-D G "__EVAL" 0 27 ""?"" "Standard Header file for the PIC16F877A device ////////////////"
+D G "__PCM__" 0 38 ""5.115d""
+D G "__DEVICE__" 0 38 "877"
+D G "__DATE__" 0 38 ""05-Jun-23""
+D G "__TIME__" 0 38 ""16:24:32""
+D G "_UNICODE" 0 38 ""?""
+D G "__EVAL" 0 38 ""?"" "Standard Header file for the PIC16F877A device ////////////////"
 c L "set_tris_a" 2 3 6 "FUNCTION"
 F N "set_tris_a" 2 37 ""
 V L "value" 2 37 "int8" `55 
@@ -2327,15 +2327,11 @@ D G "INT_BUSCOL" 2 702 "0x008D08"
 D G "INT_EEPROM" 2 703 "0x008D10"
 D G "INT_TIMER0" 2 704 "0x000B20"
 D G "INT_COMP" 2 705 "0x008D40"
-V G "outs" 0 5 "int8" `704 
-C L "jump_to_isr" 0 5 1 "FUNCTION"
-V G "delay" 0 6 "int16" `705 
-F N "main" 0 8 ""
-F G "main" 0 9 "void()" `706 
-C L "main" 0 5 1 "FUNCTION"
-C L "main" 0 5 1 "FUNCTION"
-C L "main" 0 5 1 "FUNCTION"
-C L "main" 0 5 1 "FUNCTION"
+V G "HoeVaakGedrukt" 0 5 "int8" `704 
+F N "main" 0 7 ""
+F G "main" 0 8 "void(*int8 rCount)" `705 
+C L "main" 0 23 1 "FUNCTION"
+C L "main" 0 23 1 "FUNCTION"
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep" 0 0

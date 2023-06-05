@@ -1,6 +1,4 @@
-青Project1
-   青main  0/65  Ram=1
+青Project 1
+   青main  0/52  Ram=1
       団@cinit1  (Inline)  Ram=0
-      団@cinit2  (Inline)  Ram=0
-      団@delay_ms2  0/21  Ram=1
-      青@delay_ms2  0/21  Ram=1
+      青@cinit2  (Inline)  Ram=0

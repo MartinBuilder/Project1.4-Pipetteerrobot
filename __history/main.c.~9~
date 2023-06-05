@@ -2,7 +2,9 @@
 #include <16F877A.h>
 #use delay(clock=8867238)
 #fuses HS,NOWDT
+int outs = 1;  //preset to start process
 int HoeVaakGedrukt;
+long delay;
 
 void main()
 {
@@ -14,17 +16,17 @@ void main()
    
    while(TRUE)
    {
-      if(input_b()==2)
+      if(input_b(2))
       {
       HoeVaakGedrukt++;
-      if(HoeVaakGedrukt == 1)
+      if(HoeVaakGedrukt = 1)
       {
-         output_b(16);
+         output_b(16)
          // voer functie prep uit
       }
-      if(HoeVaakGedrukt == 2)
+      if(HoeVaakGedrukt = 2)
       {
-         output_b(25);
+         output_b(25)
          // voer functie hoofprogramma uit
       HoeVaakGedrukt = 0;
       }
@@ -34,3 +36,32 @@ void main()
    }
 }
 
+
+int Sum(int a, int b)
+{
+   return a+b;
+}
+
+int Zwarteknop()
+{
+
+input_b(2);
+   return 1;
+   
+
+}
+
+int Kliksensor()
+{
+
+}
+
+int LSreservoir()
+{
+
+}
+
+int LSbuisjes()
+{
+
+}
