@@ -12,7 +12,7 @@ TCCP1_isr()
  // tijd per puls is 1 / 2216809  = 0,45 microsec  (   44336 * 0,45 microsec = 20 milliseconden
    output_bit(PIN_D0, 1);  //output bit to pin
    output_bit(PIN_D1, 1);  //output bit to pin
-   for (delay = 0; delay <361; delay++); // 361 voor onder pomp - 230 voor startpositie
+   for (delay = 0; delay <230; delay++); // 361 voor onder pomp - 
     output_bit(PIN_D0,0);  
    for (delay = 0; delay <100; delay++);
     output_bit(PIN_D1,0);

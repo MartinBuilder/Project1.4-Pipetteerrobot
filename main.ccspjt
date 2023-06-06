@@ -1,6 +1,6 @@
 [PROJECT]
 Target=main.hex
-Processor_Text=PIC16F877A
+Processor_Text=PIC16F877
 CCSVerions=5.115d
 Compiler=PCM
 CCSVersion=5.115d
@@ -17,25 +17,36 @@ Type=4
 forcecoff=0
 
 [ProjectLog]
-Days=1
+Days=2
 D1=02-06-2023
 D1_L=4
 D1_L1=[42073]Project Opened.
 D1_L2=[42078]Started Editing.
 D1_L3=[42943]Stopped Editing.
 D1_L4=[47150]Started Editing.
+D2=06-06-2023
+D2_L=3
+D2_L1=[43594]Stopped Editing.
+D2_L2=[43667]Started Editing.
+D2_L3=[43990]Stopped Editing.
 
 [Opened Files]
 1=main.c
 t1=1
-2=..\..\..\Downloads\selected_files_202362_113044\fig_2_25.c
-t2=48
-Count=1
+2=Interface.c
+t2=1
+Count=5
+3=Interface.h
+t3=1
+4=..\..\..\..\..\Program Files (x86)\PICCDEMO\Devices\16F877A.h
+t4=601
+5=prepping.c
+t5=1
 [main.c]
 Type=4
 
 [defines]
-buildcount=2
+buildcount=14
 [Units]
 Count=1
 1=main (main)
