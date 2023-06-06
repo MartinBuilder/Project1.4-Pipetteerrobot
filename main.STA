@@ -1,9 +1,9 @@
 
-ROM used:   56/8192 (1%)
-            56/8192 (1%) including unused fragments
+ROM used:   51/8192 (1%)
+            51/8192 (1%) including unused fragments
 
             0.1 Average locations per line
-            3.5 Average locations per statement
+            3.2 Average locations per statement
 
 RAM used:   8/368 (2%) at main() level
             8/368 (2%) worst case
@@ -21,25 +21,25 @@ Lines Stmts  %   Files
 
 Page ROM  %  RAM    Vol Diff  Functions:
 ---- --- --- ---    --- ----  ----------
-0     52  93    1    280  3.7  main
- Inline         0     43  3.0  @cinit1
+0     47  92    1    315  4.2  main
+ Inline         0             @cinit1
 
 Program metrics:
-    Functions               2
+    Functions               1
     Statements              16
     Comments                124
-    Volume (V)              371
-    Difficulty (D)          6.5
-    Effort to implement (E) 2425
-    Time to implement (T)   2 minutes
+    Volume (V)              318
+    Difficulty (D)          4.0
+    Effort to implement (E) 1277
+    Time to implement (T)   1 minutes
     Est Delivered Bugs (B)  0
     Cyclomatic Complexity   3
-    Maintainability (MI)    92
+    Maintainability (MI)    45
 
  Segment     Used  Free
 -----------  ----  ----
 00000-00003     4  0  
-00004-007FF    52  1992  
+00004-007FF    47  1997  
 00800-00FFF     0  2048  
 01000-017FF     0  2048  
 01800-01FFF     0  2048  

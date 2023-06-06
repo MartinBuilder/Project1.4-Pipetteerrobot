@@ -14,7 +14,7 @@ void main()
    
    while(TRUE)
    {
-      if(input(PIN_B1)==1)
+      if(input_bit(PIN_B1)==1)
       {
       HoeVaakGedrukt++;
       if(HoeVaakGedrukt == 1)
