@@ -1,0 +1,24 @@
+ÀÄProject1
+   ÀÄMAIN  0/87  Ram=1
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄ@cinit2  (Inline)  Ram=0
+      ÃÄmotor1R  0/15  Ram=0
+      ÃÄ@delay_ms1  0/20  Ram=1
+      ÃÄmotor1uit  0/12  Ram=0
+      ³  ÀÄ@delay_ms1  0/20  Ram=1
+      ÃÄ@delay_ms1  0/20  Ram=1
+      ÃÄmotor1L  0/15  Ram=0
+      ÃÄ@delay_ms1  0/20  Ram=1
+      ÃÄmotor1uit  0/12  Ram=0
+      ³  ÀÄ*
+      ÃÄ@delay_ms1  0/20  Ram=1
+      ÃÄmotor2R  0/21  Ram=0
+      ÃÄ@delay_ms1  0/20  Ram=1
+      ÃÄmotor2uit  0/16  Ram=0
+      ³  ÀÄ@delay_ms1  0/20  Ram=1
+      ÃÄ@delay_ms1  0/20  Ram=1
+      ÃÄmotor2L  0/21  Ram=0
+      ÃÄ@delay_ms1  0/20  Ram=1
+      ÃÄmotor2uit  0/16  Ram=0
+      ³  ÀÄ*
+      ÀÄ@delay_ms1  0/20  Ram=1

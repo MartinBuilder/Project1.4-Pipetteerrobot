@@ -1,0 +1,22 @@
+[PROJECT]
+Target=fig_2_25.hex
+Processor_Text=PIC16F877
+CCSVersion=5.115d
+Compiler=PCM
+[Target Data]
+FileList=fig_2_25.c
+[fig_2_25.c]
+Type=4
+[mru-list]
+1=fig_2_25.c
+
+[defines]
+buildcount=3
+
+[Opened Files]
+1=fig_2_25.c
+t1=1
+Count=1
+[Units]
+Count=1
+1=fig_2_25 (main)
