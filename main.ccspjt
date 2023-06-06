@@ -51,7 +51,7 @@ D2_L18=[77426]Project Closed.
 D2_L19=[77452]Project Opened.
 D2_L20=[77469]Project Closed.
 D3=06-06-2023
-D3_L=10
+D3_L=12
 D3_L1=[38153]Project Opened.
 D3_L2=[38210]Project Closed.
 D3_L3=[38210]Project Opened.
@@ -62,6 +62,8 @@ D3_L7=[39817]Project Closed.
 D3_L8=[39822]Project Opened.
 D3_L9=[40008]Started Editing.
 D3_L10=[40432]Stopped Editing.
+D3_L11=[44344]Project Opened.
+D3_L12=[44390]Started Editing.
 
 [Opened Files]
 1=main.c
@@ -72,12 +74,12 @@ Count=4
 3=Interface.h
 t3=1
 4=..\..\..\..\..\Program Files (x86)\PICCDEMO\Devices\16F877A.h
-t4=588
+t4=576
 [main.c]
 Type=4
 
 [defines]
-buildcount=8
+buildcount=9
 [Units]
 Count=1
 1=main (main)

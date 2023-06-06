@@ -8,8 +8,8 @@
 01B     CCP_2
 01C     CCP_2_HIGH
 020     HoeVaakGedrukt
-021     @TRIS_C
-022     main.@SCRATCH1
+021     inputKnop
+022     @TRIS_C
 077     @SCRATCH
 078     @SCRATCH
 078     _RETURN_
@@ -17,8 +17,8 @@
 07A     @SCRATCH
 09C.6   C1OUT
 09C.7   C2OUT
-10D-10E @WRITE_PROGRAM_MEMORY8.P1
-10D-10E @READ_PROGRAM_MEMORY8.P2
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
 
 ROM Allocation:
 000004  main
@@ -29,13 +29,13 @@ Project Directory:
     C:\Users\koens\Downloads\Project 1.4 programma\Project1.4-Pipetteerrobot\
 
 Project Files:
-    main.c                                                  [06-jun-23 10:48  CRC=CE1F8B8E]
-    main.h                                                  [05-jun-23 14:43  CRC=00000000]
+    main.c                                                  [06-jun-23 12:25  CRC=6B724338]
+    main.h                                                  [06-jun-23 12:18  CRC=00000000]
     ..\..\..\..\..\Program Files (x86)\PICCDEMO\Devices\16F877A.h [02-mei-23 08:27  CRC=32478F9C]
 
-Source signature=32AEAAC6
+Source signature=D0016270
 Program memory checksum=0000
-Hex file CRC=CB0D
+Hex file CRC=417B
 
 Units:
     C:\Users\koens\Downloads\Project 1.4 programma\Project1.4-Pipetteerrobot\main (main)

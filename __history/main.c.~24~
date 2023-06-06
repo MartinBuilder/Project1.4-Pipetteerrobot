@@ -3,7 +3,7 @@
 #use delay(clock=8867238)
 #fuses HS,NOWDT
 int HoeVaakGedrukt;
-int inputKnop;
+int input;
 
 void main()
 {
@@ -18,8 +18,8 @@ void main()
    
    while(TRUE)
    {
-      inputKnop = input(PIN_B1);
-      if(inputKnop == 1)
+      input = input(PIN_B1);
+      if(input == 1)
       {
       HoeVaakGedrukt++;
       if(HoeVaakGedrukt == 1)

@@ -1,10 +1,10 @@
-CCS PCM C Compiler, Version 5.115d, 1               06-jun-23 10:48
+CCS PCM C Compiler, Version 5.115d, 1               06-jun-23 12:25
 Compiler operating in Evaluation Mode
 To obtain a fully enabled compiler visit www.ccsinfo.com/products
 
                Filename:   C:\Users\koens\Downloads\Project 1.4 programma\Project1.4-Pipetteerrobot\main.lst
 
-               ROM used:   51 words (1%)
+               ROM used:   70 words (1%)
                            Largest free fragment is 2048
                RAM used:   8 (2%) at main() level
                            8 (2%) worst case
@@ -54,13 +54,14 @@ To obtain a fully enabled compiler visit www.ccsinfo.com/products
 .................... #use delay(clock=8867238)
 .................... #fuses HS,NOWDT
 .................... int HoeVaakGedrukt;
+.................... int inputKnop;
 .................... 
 .................... void main()
 0004:  MOVF   03,W
 0005:  ANDLW  1F
 0006:  MOVWF  03
 0007:  MOVLW  FF
-0008:  MOVWF  21
+0008:  MOVWF  22
 0009:  BSF    03.5
 000A:  BSF    1F.0
 000B:  BSF    1F.1
@@ -81,57 +82,82 @@ To obtain a fully enabled compiler visit www.ccsinfo.com/products
 0015:  MOVLW  0F
 0016:  MOVWF  07
 0017:  BCF    03.5
-0018:  MOVWF  21
+0018:  MOVWF  22
 ....................    set_tris_d (0x00);
 0019:  MOVLW  00
 001A:  BSF    03.5
 001B:  MOVWF  08
 ....................    
+....................    output_bit(PIN_B4, 0);
+001C:  BCF    03.5
+001D:  BCF    06.4
+001E:  BSF    03.5
+001F:  BCF    06.4
+....................    output_bit(PIN_B5, 0);
+0020:  BCF    03.5
+0021:  BCF    06.5
+0022:  BSF    03.5
+0023:  BCF    06.5
+....................    
 ....................    while(TRUE)
 ....................    {
-....................       if(input(PIN_B1)==1)
-001C:  BSF    06.1
-001D:  BCF    03.5
-001E:  BTFSS  06.1
-001F:  GOTO   030
+....................       inputKnop = input(PIN_B1);
+0024:  BSF    06.1
+0025:  BCF    03.5
+0026:  CLRF   21
+0027:  BTFSC  06.1
+0028:  INCF   21,F
+....................       if(inputKnop == 1)
+0029:  DECFSZ 21,W
+002A:  GOTO   043
 ....................       {
 ....................       HoeVaakGedrukt++;
-0020:  INCF   20,F
+002B:  INCF   20,F
 ....................       if(HoeVaakGedrukt == 1)
-0021:  DECFSZ 20,W
-0022:  GOTO   027
+002C:  DECFSZ 20,W
+002D:  GOTO   036
 ....................       {
 ....................          output_bit(PIN_B4, 1);
-0023:  BSF    06.4
-0024:  BSF    03.5
-0025:  BCF    06.4
-0026:  BCF    03.5
+002E:  BSF    06.4
+002F:  BSF    03.5
+0030:  BCF    06.4
+....................          output_bit(PIN_B5, 0);
+0031:  BCF    03.5
+0032:  BCF    06.5
+0033:  BSF    03.5
+0034:  BCF    06.5
+0035:  BCF    03.5
 ....................          // voer functie prep uit
 ....................       }
 ....................       if(HoeVaakGedrukt == 2)
-0027:  MOVF   20,W
-0028:  SUBLW  02
-0029:  BTFSS  03.2
-002A:  GOTO   030
+0036:  MOVF   20,W
+0037:  SUBLW  02
+0038:  BTFSS  03.2
+0039:  GOTO   043
 ....................       {
 ....................          output_bit(PIN_B5, 1);
-002B:  BSF    06.5
-002C:  BSF    03.5
-002D:  BCF    06.5
+003A:  BSF    06.5
+003B:  BSF    03.5
+003C:  BCF    06.5
+....................          output_bit(PIN_B4, 0);
+003D:  BCF    03.5
+003E:  BCF    06.4
+003F:  BSF    03.5
+0040:  BCF    06.4
 ....................          // voer functie hoofprogramma uit
-....................       HoeVaakGedrukt = 0;
-002E:  BCF    03.5
-002F:  CLRF   20
+....................          HoeVaakGedrukt = 0;
+0041:  BCF    03.5
+0042:  CLRF   20
 ....................       }
 ....................         
 ....................       
 ....................       }
-0030:  BSF    03.5
-0031:  GOTO   01C
+0043:  BSF    03.5
+0044:  GOTO   024
 ....................    }
 .................... }
 .................... 
-0032:  SLEEP
+0045:  SLEEP
 
 Configuration Fuses:
    Word  1: 3F72   HS NOWDT PUT BROWNOUT NOLVP NOCPD NOWRT NODEBUG NOPROTECT
