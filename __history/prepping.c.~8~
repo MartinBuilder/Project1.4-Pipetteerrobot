@@ -32,16 +32,16 @@ void main()
    setup_ccp1(CCP_COMPARE_INT); //set CCP1 to cause an interrupt on match
    enable_interrupts(INT_CCP1);  //unmask Timer2 match interrupt
    enable_interrupts(global);    //enabled all unmasked interrupts
-   
-   if(1) prepping();
+   prep = 1;
+   while(1);
 
 }
 
-void prepping(){
+//void prepping(){
 
-prep = 1;
+//prep = 1;
 
-delay_ms(600);
+//delay_ms(300);
 
 //void pompmotor_aan();
 
@@ -49,7 +49,7 @@ delay_ms(600);
 
 //void pompmotor_uit();
 
-prep = 0;
+//prep = 0;
 
-}
+//}
 

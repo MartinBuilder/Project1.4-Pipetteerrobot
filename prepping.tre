@@ -1,0 +1,7 @@
+ÀÄProject 1
+   ÃÄMAIN  0/24  Ram=0
+   ³  ÃÄ@cinit1  (Inline)  Ram=0
+   ³  ÃÄ@cinit2  (Inline)  Ram=0
+   ³  ÀÄprepping  0/32  Ram=1
+   ³     ÀÄ@delay_ms1  (Inline)  Ram=1
+   ÀÄTCCP1_isr  0/56  Ram=0
