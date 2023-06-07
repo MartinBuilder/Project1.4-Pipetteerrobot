@@ -1,9 +1,9 @@
-D G "__PCM__" 0 82 ""5.115d""
-D G "__DEVICE__" 0 82 "877"
-D G "__DATE__" 0 82 ""06-Jun-23""
-D G "__TIME__" 0 82 ""12:09:46""
-D G "_UNICODE" 0 82 ""?""
-D G "__EVAL" 0 82 ""?"" "Standard Header file for the PIC16F877 device ////////////////"
+D G "__PCM__" 0 67 ""5.115d""
+D G "__DEVICE__" 0 67 "877"
+D G "__DATE__" 0 67 ""07-Jun-23""
+D G "__TIME__" 0 67 ""20:43:38""
+D G "_UNICODE" 0 67 ""?""
+D G "__EVAL" 0 67 ""?"" "Standard Header file for the PIC16F877 device ////////////////"
 c L "set_tris_a" 1 3 6 "FUNCTION"
 F N "set_tris_a" 1 37 ""
 V L "value" 1 37 "int8" `54 
@@ -1142,29 +1142,31 @@ D G "INT_BUSCOL" 1 671 "0x008D08"
 D G "INT_EEPROM" 1 672 "0x008D10"
 D G "INT_TIMER0" 1 673 "0x000B20"
 F N "motor1R" 0 5 ""
-F G "motor1R" 0 6 "void()" `693 
-C L "motor1R" 0 9 1 "FUNCTION"
-F N "motor1uit" 0 12 ""
-F G "motor1uit" 0 13 "void()" `694 
-C L "motor1uit" 0 9 1 "FUNCTION"
-F N "motor1L" 0 19 ""
-F G "motor1L" 0 20 "void()" `695 
-C L "motor1L" 0 9 1 "FUNCTION"
-F N "motor2R" 0 26 ""
-F G "motor2R" 0 27 "void()" `696 
-C L "motor2R" 0 9 1 "FUNCTION"
-F N "motor2uit" 0 33 ""
-F G "motor2uit" 0 34 "void()" `698 
-C L "motor2uit" 0 9 1 "FUNCTION"
-F N "motor2L" 0 40 ""
-F G "motor2L" 0 41 "void()" `699 
-C L "motor2L" 0 9 1 "FUNCTION"
-F N "MAIN" 0 47 ""
-F G "MAIN" 0 48 "void()" `700 
-C L "MAIN" 0 9 1 "FUNCTION"
-C L "MAIN" 0 9 1 "FUNCTION"
-C L "MAIN" 0 9 1 "FUNCTION"
-C L "MAIN" 0 9 1 "FUNCTION"
+F G "motor1R" 0 5 "void()" `693 
+C L "motor1R" 0 7 1 "FUNCTION"
+F N "motor1uit" 0 10 ""
+F G "motor1uit" 0 10 "void()" `694 
+C L "motor1uit" 0 7 1 "FUNCTION"
+F N "motor1L" 0 15 ""
+F G "motor1L" 0 15 "void()" `695 
+C L "motor1L" 0 7 1 "FUNCTION"
+F N "motor2R" 0 20 ""
+F G "motor2R" 0 20 "void()" `696 
+C L "motor2R" 0 7 1 "FUNCTION"
+F N "motor2uit" 0 25 ""
+F G "motor2uit" 0 25 "void()" `698 
+C L "motor2uit" 0 7 1 "FUNCTION"
+F N "motor2L" 0 30 ""
+F G "motor2L" 0 30 "void()" `699 
+C L "motor2L" 0 7 1 "FUNCTION"
+F N "HydrauliekAan" 0 35 ""
+F G "HydrauliekAan" 0 35 "void()" `700 
+C L "HydrauliekAan" 0 7 1 "FUNCTION"
+F N "HydrauliekUit" 0 39 ""
+F G "HydrauliekUit" 0 39 "void()" `701 
+C L "HydrauliekUit" 0 7 1 "FUNCTION"
+F N "MAIN" 0 43 ""
+F G "MAIN" 0 43 "void()" `702 
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep" 0 0

@@ -1,8 +1,8 @@
 004-005 @WRITE_PROGRAM_MEMORY8.P1
 004-005 @READ_PROGRAM_MEMORY8.P2
 008     PSP_DATA
-015     CCP_1_LOW
 015     CCP_1
+015     CCP_1_LOW
 016     CCP_1_HIGH
 01B     CCP_2_LOW
 01B     CCP_2
@@ -20,26 +20,26 @@
 
 ROM Allocation:
 000004  motor1R
-000013  @delay_ms1
-000027  motor1uit
-000033  motor1L
-000042  motor2R
-000057  motor2uit
-000067  motor2L
-00007C  @cinit1
-00007C  MAIN
-000086  @cinit2
+00000F  @delay_ms1
+000023  motor1uit
+00002C  motor1L
+000037  motor2R
+000046  motor2uit
+000053  motor2L
+000062  @cinit1
+000062  MAIN
+00006C  @cinit2
 
 Project Directory:
     C:\Users\Thijs\Desktop\project-1-4\Project1.4-Pipetteerrobot\
 
 Project Files:
-    fig_2_25.c                                              [06-Jun-23 12:05  CRC=7313570B]
+    fig_2_25.c                                              [07-Jun-23 20:43  CRC=73FAFCAE]
     ..\..\..\..\..\Program Files (x86)\PICCDEMO\Devices\16F877.h [02-May-23 08:27  CRC=44E754B2]
 
-Source signature=FCE2006F
+Source signature=FDC9A612
 Program memory checksum=0000
-Hex file CRC=8EA6
+Hex file CRC=6141
 
 Units:
     C:\Users\Thijs\Desktop\project-1-4\Project1.4-Pipetteerrobot\fig_2_25 (main)

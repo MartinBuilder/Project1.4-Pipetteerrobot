@@ -11,12 +11,36 @@ Type=4
 1=fig_2_25.c
 
 [defines]
-buildcount=3
+buildcount=4
 
 [Opened Files]
 1=fig_2_25.c
-t1=1
-Count=1
+t1=9
+Count=2
+2=main.c
+t2=9
+
+[ProjectLog]
+Days=2
+D1=06-06-2023
+D1_L=2
+D1_L1=[43855]Stopped Editing.
+TotalEdit=15
+TotalDebug=0
+D1_E=4
+D1_D=0
+D1_L2=[48892]Project Closed.
+D2=07-06-2023
+D2_L=4
+D2_L1=[74037]Project Opened.
+D2_L2=[74050]Started Editing.
+D2_L3=[74686]Stopped Editing.
+D2_E=11
+D2_D=0
+D2_L4=[74686]Project Closed.
+
+[fileformats]
+forcecoff=0
 [Units]
 Count=1
 1=fig_2_25 (main)

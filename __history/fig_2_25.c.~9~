@@ -32,12 +32,12 @@ void motor2L(){
    output_bit( PIN_C5, 1);//motor 2 Linksom
 }  
 
-void hydrauliekAan(){
-   output_bit( PIN_A4, 1);//hydraulish systeem aan
+void HydrauliekAan(){
+   output_bit( PIN_X4, 1);//hydraulish systeem aan
 }
 
-void hydrauliekUit(){
-   output_bit( PIN_A5, 0);//hydraulish systeem stoppen
+void HydrauliekUit(){
+   output_bit( PIN_X5, 0);//hydraulish systeem stoppen
 }
 
 void main(){
@@ -60,11 +60,6 @@ void main(){
       motor2L ();
       delay_ms(2000);
       motor2uit();
-      delay_ms(1000);
-      
-      hydrauliekAan();
-      delay_ms(2000);
-      hydrauliekUit();
       delay_ms(1000);
    }
 }
