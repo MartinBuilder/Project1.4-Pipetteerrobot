@@ -5,26 +5,19 @@
 #fuses HS,NOWDT
 int outs = 1;  //preset to start process
 long delay ;
-int prep = 0;
 #int_CCP1
 TCCP1_isr()
 {
    CCP_1 = CCP_1 + 44336;      //increment compare counter 8.867238Mhz/4  =  2.2168095 Mhz
  // tijd per puls is 1 / 2216809  = 0,45 microsec  (   44336 * 0,45 microsec = 20 milliseconden
    output_bit(PIN_D0, 1);  //output bit to pin
-
-   if (prep == 1){
-   for (delay = 0; delay <361; delay++);
-    output_bit(PIN_D0,0); 
-   }
-   
-   if (prep == 0){
+   output_bit(PIN_D1, 1);  //output bit to pin
+   for (delay = 0; delay <200; delay++);
+    output_bit(PIN_D0,0);  
    for (delay = 0; delay <100; delay++);
-    output_bit(PIN_D0,0);
-   }
+    output_bit(PIN_D1,0);
 }
 
-void prepping();
 
 void main()
 {
@@ -36,19 +29,11 @@ void main()
 
 }
 
-void prepping(){
 
-prep = 1;
+//prepping
 
-delay_ms(300);
-
-//void pompmotor_aan();
-
-delay_ms(6000);
-
-//void pompmotor_uit();
-
-prep = 0;
-
-}
+// servo naar 90 graden
+// Pomp laten draaien 
+// Pomp stoppen
+// servo naar startpositie
 
