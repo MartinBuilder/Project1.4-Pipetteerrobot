@@ -1,4 +1,4 @@
-CCS PCM C Compiler, Version 5.115d, 1               06-jun-23 12:25
+CCS PCM C Compiler, Version 5.115d, 1               08-jun-23 10:35
 Compiler operating in Evaluation Mode
 To obtain a fully enabled compiler visit www.ccsinfo.com/products
 
@@ -101,11 +101,11 @@ To obtain a fully enabled compiler visit www.ccsinfo.com/products
 ....................    
 ....................    while(TRUE)
 ....................    {
-....................       inputKnop = input(PIN_B1);
-0024:  BSF    06.1
+....................       inputKnop = input(PIN_A1);
+0024:  BSF    05.1
 0025:  BCF    03.5
 0026:  CLRF   21
-0027:  BTFSC  06.1
+0027:  BTFSC  05.1
 0028:  INCF   21,F
 ....................       if(inputKnop == 1)
 0029:  DECFSZ 21,W

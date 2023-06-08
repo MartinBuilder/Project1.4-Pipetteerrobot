@@ -21,7 +21,7 @@ void main()
       inputKnop = input(PIN_A1);
       if(inputKnop == 1)
       {
-      HoeVaakGedrukt++;
+      HoeVaakGedrukt++;=
       if(HoeVaakGedrukt == 1)
       {
          output_bit(PIN_B4, 1);

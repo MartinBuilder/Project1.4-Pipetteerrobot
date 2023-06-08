@@ -17,7 +17,7 @@ Type=4
 forcecoff=0
 
 [ProjectLog]
-Days=3
+Days=4
 D1=02-06-2023
 D1_L=4
 D1_L1=[42073]Project Opened.
@@ -43,7 +43,7 @@ D2_L14=[60695]Started Editing.
 D2_L15=[72378]Stopped Editing.
 D2_L16=[72496]Started Editing.
 D2_L17=[73062]Stopped Editing.
-TotalEdit=232
+TotalEdit=240
 TotalDebug=0
 D2_E=232
 D2_D=0
@@ -51,7 +51,7 @@ D2_L18=[77426]Project Closed.
 D2_L19=[77452]Project Opened.
 D2_L20=[77469]Project Closed.
 D3=06-06-2023
-D3_L=12
+D3_L=15
 D3_L1=[38153]Project Opened.
 D3_L2=[38210]Project Closed.
 D3_L3=[38210]Project Opened.
@@ -64,22 +64,31 @@ D3_L9=[40008]Started Editing.
 D3_L10=[40432]Stopped Editing.
 D3_L11=[44344]Project Opened.
 D3_L12=[44390]Started Editing.
+D3_L13=[49262]Project Opened.
+D3_E=8
+D3_D=0
+D3_L14=[64818]Project Opened.
+D3_L15=[64848]Project Closed.
+D4=08-06-2023
+D4_L=2
+D4_L1=[37604]Project Opened.
+D4_L2=[38043]Started Editing.
 
 [Opened Files]
 1=main.c
-t1=1
+t1=14
 2=Interface.c
 t2=1
 Count=4
 3=Interface.h
 t3=1
 4=..\..\..\..\..\Program Files (x86)\PICCDEMO\Devices\16F877A.h
-t4=576
+t4=1
 [main.c]
 Type=4
 
 [defines]
-buildcount=9
+buildcount=10
 [Units]
 Count=1
 1=main (main)
