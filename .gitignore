@@ -51,14 +51,16 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
-#Microcontrollerfiles
+#Microcontrollerfolders
 __history/
-*.ccspjt
-*.cof
-*.err
-*.esym
-*.lst
-*.STA
-*.sym
-*.tre
-*.xsym
+
+#Microcontrollerfiles
+.ccspjt
+.cof
+.err
+.esym
+.lst
+.STA
+.sym
+.tre
+.xsym
