@@ -1,4 +1,4 @@
-CCS PCM C Compiler, Version 5.115d, 1               08-jun-23 10:35
+CCS PCM C Compiler, Version 5.115d, 1               08-jun-23 10:48
 Compiler operating in Evaluation Mode
 To obtain a fully enabled compiler visit www.ccsinfo.com/products
 
@@ -72,11 +72,11 @@ To obtain a fully enabled compiler visit www.ccsinfo.com/products
 0010:  BCF    03.7
 .................... {
 .................... 
-....................    set_tris_a (0x07);
-0011:  MOVLW  07
+....................    set_tris_a (0xFF);
+0011:  MOVLW  FF
 0012:  MOVWF  05
-....................    set_tris_b (0x03);
-0013:  MOVLW  03
+....................    set_tris_b (0x00);
+0013:  MOVLW  00
 0014:  MOVWF  06
 ....................    set_tris_c (0x0F);
 0015:  MOVLW  0F

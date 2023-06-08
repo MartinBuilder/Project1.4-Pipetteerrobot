@@ -1,7 +1,7 @@
 D G "__PCM__" 0 45 ""5.115d""
 D G "__DEVICE__" 0 45 "877"
 D G "__DATE__" 0 45 ""08-Jun-23""
-D G "__TIME__" 0 45 ""10:35:47""
+D G "__TIME__" 0 45 ""10:48:42""
 D G "_UNICODE" 0 45 ""?""
 D G "__EVAL" 0 45 ""?"" "Standard Header file for the PIC16F877A device ////////////////"
 c L "set_tris_a" 2 3 6 "FUNCTION"

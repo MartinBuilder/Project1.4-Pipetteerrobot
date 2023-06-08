@@ -8,8 +8,8 @@ int inputKnop;
 void main()
 {
 
-   set_tris_a (0xFF);
-   set_tris_b (0x00);
+   set_tris_a (0x07);
+   set_tris_b (0x03);
    set_tris_c (0x0F);
    set_tris_d (0x00);
    

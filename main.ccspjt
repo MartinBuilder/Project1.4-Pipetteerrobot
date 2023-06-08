@@ -70,13 +70,15 @@ D3_D=0
 D3_L14=[64818]Project Opened.
 D3_L15=[64848]Project Closed.
 D4=08-06-2023
-D4_L=2
+D4_L=4
 D4_L1=[37604]Project Opened.
 D4_L2=[38043]Started Editing.
+D4_L3=[38446]Stopped Editing.
+D4_L4=[38757]Started Editing.
 
 [Opened Files]
 1=main.c
-t1=14
+t1=1
 2=Interface.c
 t2=1
 Count=4
@@ -88,7 +90,7 @@ t4=1
 Type=4
 
 [defines]
-buildcount=10
+buildcount=11
 [Units]
 Count=1
 1=main (main)

@@ -29,13 +29,13 @@ Project Directory:
     C:\Users\koens\Downloads\Project 1.4 programma\Project1.4-Pipetteerrobot\
 
 Project Files:
-    main.c                                                  [08-jun-23 10:35  CRC=6B724338]
+    main.c                                                  [08-jun-23 10:48  CRC=6B724338]
     main.h                                                  [05-jun-23 14:43  CRC=00000000]
     ..\..\..\..\..\Program Files (x86)\PICCDEMO\Devices\16F877A.h [02-mei-23 08:27  CRC=32478F9C]
 
 Source signature=D0016270
 Program memory checksum=0000
-Hex file CRC=B242
+Hex file CRC=1263
 
 Units:
     C:\Users\koens\Downloads\Project 1.4 programma\Project1.4-Pipetteerrobot\main (main)
