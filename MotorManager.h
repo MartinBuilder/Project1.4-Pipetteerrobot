@@ -1,15 +1,15 @@
 #ifndef MOTORMANAGER_H_INCLUDED
 #define MOTORMANAGER_H_INCLUDED
 
-void motor1Right();
-void motor1Off();
-void motor1Left();
+void motor1Right(void);
+void motor1Off(void);
+void motor1Left(void);
 
-void motor2Right();
-void motor2Off();
-void motor2Left();
+void motor2Right(void);
+void motor2Off(void);
+void motor2Left(void);
 
-void pneumatiekOn();
-void pneumatiekOff();
+void pneumatiekOn(void);
+void pneumatiekOff(void);
 
 #endif
