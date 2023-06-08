@@ -1,3 +1,0 @@
-Compiling C:\Users\702274\Downloads\LIB_ULN2803A\ULN2803A\KiCad\Project 1.4\Code\Project1.4-Pipetteerrobot\main on 08-Jun-23 at 10:52
->>> Warning 208 "C:\Users\702274\Downloads\LIB_ULN2803A\ULN2803A\KiCad\Project 1.4\Code\Project1.4-Pipetteerrobot\main.c" Line 9(1,10): Function not void and does not return a value  TCCP1_isr
->>> Warning 203 "C:\Users\702274\Downloads\LIB_ULN2803A\ULN2803A\KiCad\Project 1.4\Code\Project1.4-Pipetteerrobot\main.c" Line 28(1,1): Condition always TRUE
