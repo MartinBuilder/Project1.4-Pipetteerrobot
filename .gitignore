@@ -50,3 +50,17 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+#Microcontrollerfolders
+__history/
+
+#Microcontrollerfiles
+*.ccspjt
+*.cof
+*.err
+*.esym
+*.lst
+*.STA
+*.sym
+*.tre
+*.xsym
