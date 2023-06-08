@@ -38,7 +38,8 @@ void main()
    if(TRUE) prepping();
 }
 
-void prepping(){
+void prepping()
+{
    prep = 1;
    delay_ms(500);
    if(TRUE) motor1Left();
@@ -48,4 +49,4 @@ void prepping(){
    prep = 0;
    delay_ms(2000);
 }
-}
+
