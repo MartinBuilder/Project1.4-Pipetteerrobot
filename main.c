@@ -25,7 +25,8 @@ void main()
    setup_ccp1(CCP_COMPARE_INT); //set CCP1 to cause an interrupt on match
    enable_interrupts(INT_CCP1);  //unmask Timer2 match interrupt
    enable_interrupts(global);    //enabled all unmasked interrupts
-   while(1);     //main does nothing
-
+   while(TRUE)
+   {
+   }
 }
 
