@@ -1,11 +1,13 @@
-//prepping
-
-#include <16F877.h>
+#include <16F877A.h>
+#include "MotorManager.h"
+#include "MotorManager.c"
 #use delay(clock=8867238)
 #fuses HS,NOWDT
+
 int outs = 1;  //preset to start process
-long delay ;
+long delay;
 int prep = 0;
+
 #int_CCP1
 TCCP1_isr()
 {
@@ -24,13 +26,7 @@ TCCP1_isr()
    }
 }
 
-
 void prepping();
-
-void pompmotor_aan();
-
-void pompmotor_uit();
-
 
 void main()
 {
@@ -45,22 +41,11 @@ void main()
 void prepping(){
    prep = 1;
    delay_ms(500);
-   if(TRUE) pompmotor_aan();
+   if(TRUE) motor1Left();
    delay_ms(10000);
-   if(TRUE) pompmotor_uit();
+   if(TRUE) motor1Off();
    delay_ms(500);
    prep = 0;
    delay_ms(2000);
 }
-
-void pompmotor_aan(){
-
-output_bit( pin_B4, 0);
-output_bit( pin_B5, 1);
-}
-
-
-void pompmotor_uit(){
-   output_bit( pin_B4, 1);
-   output_bit( pin_B5, 1);
 }
