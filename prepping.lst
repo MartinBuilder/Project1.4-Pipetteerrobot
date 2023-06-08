@@ -1,20 +1,20 @@
-CCS PCM C Compiler, Version 5.115d, 1               08-Jun-23 10:34
+CCS PCM C Compiler, Version 5.115d, 1               08-Jun-23 11:14
 Compiler operating in Evaluation Mode
 To obtain a fully enabled compiler visit www.ccsinfo.com/products
 
                Filename:   C:\Users\702274\Downloads\LIB_ULN2803A\ULN2803A\KiCad\Project 1.4\Code\Project1.4-Pipetteerrobot\prepping.lst
 
-               ROM used:   168 words (2%)
+               ROM used:   198 words (2%)
                            Largest free fragment is 2048
                RAM used:   15 (4%) at main() level
                            17 (5%) worst case
-               Stack used: 1 locations (0 in main + 1 for interrupts)
+               Stack used: 2 locations (1 in main + 1 for interrupts)
                Stack size: 8
 
 *
 0000:  MOVLW  00
 0001:  MOVWF  0A
-0002:  GOTO   092
+0002:  GOTO   0B0
 0003:  NOP
 0004:  MOVWF  7F
 0005:  SWAPF  03,W
@@ -182,40 +182,44 @@ To obtain a fully enabled compiler visit www.ccsinfo.com/products
 .................... 
 .................... void prepping();
 .................... 
+.................... void pompmotor_aan();
+.................... 
+.................... void pompmotor_uit();
+.................... 
 .................... void main()
 *
-0092:  MOVF   03,W
-0093:  ANDLW  1F
-0094:  MOVWF  03
-0095:  CLRF   29
-0096:  BSF    03.5
-0097:  BSF    1F.0
-0098:  BSF    1F.1
-0099:  BSF    1F.2
-009A:  BCF    1F.3
-009B:  BCF    03.7
+00B0:  MOVF   03,W
+00B1:  ANDLW  1F
+00B2:  MOVWF  03
+00B3:  CLRF   29
+00B4:  BSF    03.5
+00B5:  BSF    1F.0
+00B6:  BSF    1F.1
+00B7:  BSF    1F.2
+00B8:  BCF    1F.3
+00B9:  BCF    03.7
 .................... {
 ....................    setup_timer_1(T1_INTERNAL|T1_DIV_BY_1); //timer1 enabled, instruction clock / 1
-009C:  MOVLW  85
-009D:  BCF    03.5
-009E:  MOVWF  10
+00BA:  MOVLW  85
+00BB:  BCF    03.5
+00BC:  MOVWF  10
 ....................    setup_ccp1(CCP_COMPARE_INT); //set CCP1 to cause an interrupt on match
-009F:  MOVLW  0A
-00A0:  MOVWF  17
+00BD:  MOVLW  0A
+00BE:  MOVWF  17
 ....................    enable_interrupts(INT_CCP1);  //unmask Timer2 match interrupt
-00A1:  BSF    03.5
-00A2:  BSF    0C.2
+00BF:  BSF    03.5
+00C0:  BSF    0C.2
 ....................    enable_interrupts(global);    //enabled all unmasked interrupts
-00A3:  MOVLW  C0
-00A4:  BCF    03.5
-00A5:  IORWF  0B,F
+00C1:  MOVLW  C0
+00C2:  BCF    03.5
+00C3:  IORWF  0B,F
 ....................  
-....................    if(1) prepping();
-00A6:  GOTO   07E
+....................    if(TRUE) prepping();
+00C4:  GOTO   07E
 .................... 
 .................... }
 .................... 
-00A7:  SLEEP
+00C5:  SLEEP
 .................... void prepping(){
 .................... 
 .................... prep = 1;
@@ -223,8 +227,8 @@ To obtain a fully enabled compiler visit www.ccsinfo.com/products
 007E:  MOVLW  01
 007F:  MOVWF  29
 .................... 
-.................... delay_ms(6000);
-0080:  MOVLW  18
+.................... delay_ms(2000);
+0080:  MOVLW  08
 0081:  MOVWF  2A
 0082:  MOVLW  FA
 0083:  MOVWF  2B
@@ -232,30 +236,81 @@ To obtain a fully enabled compiler visit www.ccsinfo.com/products
 0085:  DECFSZ 2A,F
 0086:  GOTO   082
 .................... 
+.................... if(TRUE) pompmotor_aan();
+.................... 
+.................... delay_ms(30000);
+*
+008E:  MOVLW  78
+008F:  BCF    03.5
+0090:  MOVWF  2A
+0091:  MOVLW  FA
+0092:  MOVWF  2B
+0093:  CALL   069
+0094:  DECFSZ 2A,F
+0095:  GOTO   091
+.................... 
+.................... if(TRUE) pompmotor_uit();
+.................... 
+.................... delay_ms(2000);
+*
+009D:  MOVLW  08
+009E:  BCF    03.5
+009F:  MOVWF  2A
+00A0:  MOVLW  FA
+00A1:  MOVWF  2B
+00A2:  CALL   069
+00A3:  DECFSZ 2A,F
+00A4:  GOTO   0A0
+.................... 
 .................... prep = 0;
-0087:  CLRF   29
+00A5:  CLRF   29
 .................... 
-.................... delay_ms(6000);
-0088:  MOVLW  18
-0089:  MOVWF  2A
-008A:  MOVLW  FA
-008B:  MOVWF  2B
-008C:  CALL   069
-008D:  DECFSZ 2A,F
-008E:  GOTO   08A
-008F:  BCF    0A.3
-0090:  BCF    0A.4
-0091:  GOTO   0A7 (RETURN)
-.................... 
-.................... //void pompmotor_aan();
-.................... 
-.................... //delay_ms(6000);
-.................... 
-.................... //void pompmotor_uit();
-.................... 
-.................... 
+.................... delay_ms(2000);
+00A6:  MOVLW  08
+00A7:  MOVWF  2A
+00A8:  MOVLW  FA
+00A9:  MOVWF  2B
+00AA:  CALL   069
+00AB:  DECFSZ 2A,F
+00AC:  GOTO   0A8
+00AD:  BCF    0A.3
+00AE:  BCF    0A.4
+00AF:  GOTO   0C5 (RETURN)
 .................... 
 .................... }
+.................... 
+.................... void pompmotor_aan(){
+.................... 
+.................... output_bit( pin_B4, 0);
+*
+0087:  BCF    06.4
+0088:  BSF    03.5
+0089:  BCF    06.4
+.................... output_bit( pin_B5, 1);
+008A:  BCF    03.5
+008B:  BSF    06.5
+008C:  BSF    03.5
+008D:  BCF    06.5
+.................... }
+.................... 
+.................... 
+.................... void pompmotor_uit(){
+....................    output_bit( pin_B4, 1);
+*
+0096:  BSF    06.4
+0097:  BSF    03.5
+0098:  BCF    06.4
+....................    output_bit( pin_B5, 1);
+0099:  BCF    03.5
+009A:  BSF    06.5
+009B:  BSF    03.5
+009C:  BCF    06.5
+.................... }
+.................... 
+.................... 
+.................... 
+.................... 
+.................... 
 .................... 
 
 Configuration Fuses:

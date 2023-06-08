@@ -26,10 +26,6 @@ TCCP1_isr()
 
 void prepping();
 
-void pompmotor_aan();
-
-void pompmotor_uit();
-
 void main()
 {
    setup_timer_1(T1_INTERNAL|T1_DIV_BY_1); //timer1 enabled, instruction clock / 1
@@ -37,7 +33,7 @@ void main()
    enable_interrupts(INT_CCP1);  //unmask Timer2 match interrupt
    enable_interrupts(global);    //enabled all unmasked interrupts
  
-   if(TRUE) prepping();
+   if(1) prepping();
 
 }
 
@@ -45,36 +41,19 @@ void prepping(){
 
 prep = 1;
 
-delay_ms(2000);
-
-if(TRUE) pompmotor_aan();
-
-delay_ms(30000);
-
-if(TRUE) pompmotor_uit();
-
-delay_ms(2000);
+delay_ms(6000);
 
 prep = 0;
 
-delay_ms(2000);
+delay_ms(6000);
+
+//void pompmotor_aan();
+
+//delay_ms(6000);
+
+//void pompmotor_uit();
+
+
 
 }
-
-void pompmotor_aan(){
-
-output_bit( pin_B4, 0);
-output_bit( pin_B5, 1);
-}
-
-
-void pompmotor_uit(){
-   output_bit( pin_B4, 1);
-   output_bit( pin_B5, 1);
-}
-
-
-
-
-
 

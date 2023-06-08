@@ -25,8 +25,8 @@
 07A     @SCRATCH
 07F     @INTERRUPT_AREA
 0FF     @INTERRUPT_AREA
-10D-10E @WRITE_PROGRAM_MEMORY8.P1
-10D-10E @READ_PROGRAM_MEMORY8.P2
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
 17F     @INTERRUPT_AREA
 1FF     @INTERRUPT_AREA
 27F     @INTERRUPT_AREA
@@ -94,20 +94,22 @@ ROM Allocation:
 000031  TCCP1_isr
 000069  @delay_ms1
 00007E  prepping
-000092  MAIN
-000092  @cinit1
-00009B  @cinit2
+000087  pompmotor_aan
+000096  pompmotor_uit
+0000B0  @cinit1
+0000B0  MAIN
+0000B9  @cinit2
 
 Project Directory:
     C:\Users\702274\Downloads\LIB_ULN2803A\ULN2803A\KiCad\Project 1.4\Code\Project1.4-Pipetteerrobot\
 
 Project Files:
-    prepping.c                                              [08-Jun-23 10:34  CRC=EB497F01]
+    prepping.c                                              [08-Jun-23 11:14  CRC=B62FC762]
     ..\..\..\..\..\..\..\..\..\Program Files (x86)\PICCDEMO\Devices\16F877.h [02-May-23 08:27  CRC=44E754B2]
 
-Source signature=75182865
+Source signature=3FFE70C6
 Program memory checksum=0000
-Hex file CRC=609A
+Hex file CRC=F7B8
 
 Units:
     C:\Users\702274\Downloads\LIB_ULN2803A\ULN2803A\KiCad\Project 1.4\Code\Project1.4-Pipetteerrobot\prepping (main)

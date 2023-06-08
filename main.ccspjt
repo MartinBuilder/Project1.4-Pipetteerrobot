@@ -17,7 +17,7 @@ Type=4
 forcecoff=0
 
 [ProjectLog]
-Days=2
+Days=3
 D1=02-06-2023
 D1_L=4
 D1_L1=[42073]Project Opened.
@@ -29,6 +29,9 @@ D2_L=3
 D2_L1=[43594]Stopped Editing.
 D2_L2=[43667]Started Editing.
 D2_L3=[43990]Stopped Editing.
+D3=08-06-2023
+D3_L=1
+D3_L1=[38922]Started Editing.
 
 [Opened Files]
 1=main.c

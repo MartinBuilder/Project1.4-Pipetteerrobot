@@ -1,10 +1,10 @@
-F N "prepping" 0 40 ""
-D G "__PCM__" 0 61 ""5.115d""
-D G "__DEVICE__" 0 61 "877"
-D G "__DATE__" 0 61 ""08-Jun-23""
-D G "__TIME__" 0 61 ""10:34:47""
-D G "_UNICODE" 0 61 ""?""
-D G "__EVAL" 0 61 ""?"" "prepping test programma"
+F N "pompmotor_uit" 0 70 ""
+D G "__PCM__" 0 81 ""5.115d""
+D G "__DEVICE__" 0 81 "877"
+D G "__DATE__" 0 81 ""08-Jun-23""
+D G "__TIME__" 0 81 ""11:14:18""
+D G "_UNICODE" 0 81 ""?""
+D G "__EVAL" 0 81 ""?"" "prepping test programma"
 c L "set_tris_a" 1 1 6 "FUNCTION"
 F N "set_tris_a" 1 37 ""
 V L "value" 1 37 "int8" `54 
@@ -1150,14 +1150,22 @@ C L "TCCP1_isr" 0 12 2 "FUNCTION"
 C L "TCCP1_isr" 0 12 1 "FUNCTION"
 F N "prepping" 0 27 ""
 f G "prepping" 0 27 "void()" `696 
-F N "MAIN" 0 29 ""
-F G "MAIN" 0 30 "void()" `697 
+F N "pompmotor_aan" 0 29 ""
+f G "pompmotor_aan" 0 29 "void()" `697 
+F N "pompmotor_uit" 0 31 ""
+f G "pompmotor_uit" 0 31 "void()" `698 
+F N "MAIN" 0 33 ""
+F G "MAIN" 0 34 "void()" `699 
 C L "MAIN" 0 12 1 "FUNCTION"
 C L "MAIN" 0 12 1 "FUNCTION"
 C L "MAIN" 0 12 1 "FUNCTION"
 C L "MAIN" 0 12 1 "FUNCTION"
-F N "prepping" 0 40 ""
-F G "prepping" 0 40 "void()" `696 
+F N "prepping" 0 44 ""
+F G "prepping" 0 44 "void()" `696 
+F N "pompmotor_aan" 0 64 ""
+F G "pompmotor_aan" 0 64 "void()" `697 
+F N "pompmotor_uit" 0 71 ""
+F G "pompmotor_uit" 0 71 "void()" `698 
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep" 0 0
