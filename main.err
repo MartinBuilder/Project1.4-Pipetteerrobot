@@ -1,4 +1,4 @@
-Compiling C:\Users\koens\Downloads\Project 1.4 programma\Project1.4-Pipetteerrobot\main on 08-jun-23 at 10:48
+Compiling C:\Users\marti\Documents\CCS\Project1.4-Pipetteerrobot\main on 08-Jun-23 at 12:23
 >>> Warning 225 "C:\Program Files (x86)\PICCDEMO\Devices\16F877A.h" Line 74(15,19): Duplicate #define
 >>> Warning 225 "C:\Program Files (x86)\PICCDEMO\Devices\16F877A.h" Line 75(15,19): Duplicate #define
 >>> Warning 225 "C:\Program Files (x86)\PICCDEMO\Devices\16F877A.h" Line 76(15,19): Duplicate #define
@@ -212,6 +212,3 @@ Compiling C:\Users\koens\Downloads\Project 1.4 programma\Project1.4-Pipetteerrob
 >>> Warning 225 "C:\Program Files (x86)\PICCDEMO\Devices\16F877A.h" Line 703(19,43): Duplicate #define
 >>> Warning 225 "C:\Program Files (x86)\PICCDEMO\Devices\16F877A.h" Line 704(19,43): Duplicate #define
 >>> Warning 225 "C:\Program Files (x86)\PICCDEMO\Devices\16F877A.h" Line 705(17,43): Duplicate #define
-      Memory usage:   ROM=1%      RAM=2% - 2%
-      0 Errors,  213 Warnings.
-Build Successful.

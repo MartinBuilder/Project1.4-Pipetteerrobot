@@ -7,36 +7,26 @@ int inputKnop;
 
 void main()
 {
-
-   set_tris_a (0xFF);
-   set_tris_b (0x00);
-   set_tris_c (0x0F);
-   set_tris_d (0x00);
-   
-   output_bit(PIN_B4, 0);
-   output_bit(PIN_B5, 0);
+   output_a(0x00);
+   output_b(0x00);
    
    while(TRUE)
    {
-      inputKnop = input(PIN_A1);
-      if(inputKnop == 1)
+      if(input(PIN_A1))
       {
-      HoeVaakGedrukt++;
-      if(HoeVaakGedrukt == 1)
-      {
-         output_bit(PIN_B4, 1);
-         output_bit(PIN_B5, 0);
-         // voer functie prep uit
-      }
-      if(HoeVaakGedrukt == 2)
-      {
-         output_bit(PIN_B5, 1);
-         output_bit(PIN_B4, 0);
-         // voer functie hoofprogramma uit
-         HoeVaakGedrukt = 0;
-      }
-        
-      
+         HoeVaakGedrukt++;
+         if(HoeVaakGedrukt == 0)
+         {
+            output_b(0x10);
+            // voer functie prep uit
+         }
+         else if(HoeVaakGedrukt == 1)
+         {
+            output_b(0x20);
+            // voer functie hoofprogramma uit
+            HoeVaakGedrukt = 0;
+         }
+         delay_ms(1000);
       }
    }
 }
