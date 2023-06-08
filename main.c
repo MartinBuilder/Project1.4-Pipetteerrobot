@@ -1,12 +1,13 @@
 #include <16F877A.h>
 #include "MotorManager.h"
 #include "MotorManager.c"
+#include "Prepping.h"
+#include "Prepping.c"
 #use delay(clock=8867238)
 #fuses HS,NOWDT
 
 int outs = 1;  //preset to start process
 long delay;
-int prep = 0;
 
 #int_CCP1
 TCCP1_isr()
@@ -26,7 +27,7 @@ TCCP1_isr()
    }
 }
 
-void prepping();
+//void prepping();
 
 void main()
 {
@@ -36,17 +37,5 @@ void main()
    enable_interrupts(global);    //enabled all unmasked interrupts
  
    if(TRUE) prepping();
-}
-
-void prepping()
-{
-   prep = 1;
-   delay_ms(500);
-   if(TRUE) motor1Left();
-   delay_ms(10000);
-   if(TRUE) motor1Off();
-   delay_ms(500);
-   prep = 0;
-   delay_ms(2000);
 }
 
