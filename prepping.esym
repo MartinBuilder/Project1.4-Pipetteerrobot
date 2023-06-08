@@ -1,10 +1,10 @@
 F N "prepping" 0 40 ""
-D G "__PCM__" 0 57 ""5.115d""
-D G "__DEVICE__" 0 57 "877"
-D G "__DATE__" 0 57 ""07-Jun-23""
-D G "__TIME__" 0 57 ""19:46:24""
-D G "_UNICODE" 0 57 ""?""
-D G "__EVAL" 0 57 ""?"" "prepping test programma"
+D G "__PCM__" 0 61 ""5.115d""
+D G "__DEVICE__" 0 61 "877"
+D G "__DATE__" 0 61 ""08-Jun-23""
+D G "__TIME__" 0 61 ""10:34:47""
+D G "_UNICODE" 0 61 ""?""
+D G "__EVAL" 0 61 ""?"" "prepping test programma"
 c L "set_tris_a" 1 1 6 "FUNCTION"
 F N "set_tris_a" 1 37 ""
 V L "value" 1 37 "int8" `54 
@@ -1142,25 +1142,22 @@ D G "INT_PSP" 1 670 "0x008C80"
 D G "INT_BUSCOL" 1 671 "0x008D08"
 D G "INT_EEPROM" 1 672 "0x008D10"
 D G "INT_TIMER0" 1 673 "0x000B20"
-V G "outs" 0 6 "int8" `693 
-C L "jump_to_isr" 0 6 1 "FUNCTION"
-V G "delay" 0 7 "int16" `694 
-V G "prep" 0 8 "int8" `695 
+V G "delay" 0 7 "int16" `693 
+V G "prep" 0 8 "int8" `694 
 F N "TCCP1_isr" 0 10 ""
-F G "TCCP1_isr" 0 11 "int8()" `696 
-C L "TCCP1_isr" 0 6 2 "FUNCTION"
-C L "TCCP1_isr" 0 6 1 "FUNCTION"
+F G "TCCP1_isr" 0 11 "int8()" `695 
+C L "TCCP1_isr" 0 12 2 "FUNCTION"
+C L "TCCP1_isr" 0 12 1 "FUNCTION"
 F N "prepping" 0 27 ""
-f G "prepping" 0 27 "void()" `697 
+f G "prepping" 0 27 "void()" `696 
 F N "MAIN" 0 29 ""
-F G "MAIN" 0 30 "void()" `698 
-C L "MAIN" 0 6 1 "FUNCTION"
-C L "MAIN" 0 6 1 "FUNCTION"
-C L "MAIN" 0 6 1 "FUNCTION"
-C L "MAIN" 0 6 1 "FUNCTION"
+F G "MAIN" 0 30 "void()" `697 
+C L "MAIN" 0 12 1 "FUNCTION"
+C L "MAIN" 0 12 1 "FUNCTION"
+C L "MAIN" 0 12 1 "FUNCTION"
+C L "MAIN" 0 12 1 "FUNCTION"
 F N "prepping" 0 40 ""
-F G "prepping" 0 40 "void()" `697 
-C L "prepping" 0 6 3 "FUNCTION"
+F G "prepping" 0 40 "void()" `696 
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep" 0 0

@@ -3,7 +3,7 @@
 #include <16F877.h>
 #use delay(clock=8867238)
 #fuses HS,NOWDT
-
+int outs = 1;  //preset to start process
 long delay ;
 int prep = 0;
 #int_CCP1
@@ -44,8 +44,6 @@ prep = 1;
 delay_ms(6000);
 
 prep = 0;
-
-delay_ms(6000);
 
 //void pompmotor_aan();
 

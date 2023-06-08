@@ -45,8 +45,6 @@ delay_ms(6000);
 
 prep = 0;
 
-delay_ms(6000);
-
 //void pompmotor_aan();
 
 //delay_ms(6000);

@@ -1,20 +1,20 @@
-CCS PCM C Compiler, Version 5.115d, 1               07-Jun-23 19:46
+CCS PCM C Compiler, Version 5.115d, 1               08-Jun-23 10:34
 Compiler operating in Evaluation Mode
 To obtain a fully enabled compiler visit www.ccsinfo.com/products
 
                Filename:   C:\Users\702274\Downloads\LIB_ULN2803A\ULN2803A\KiCad\Project 1.4\Code\Project1.4-Pipetteerrobot\prepping.lst
 
-               ROM used:   161 words (2%)
+               ROM used:   168 words (2%)
                            Largest free fragment is 2048
-               RAM used:   16 (4%) at main() level
-                           18 (5%) worst case
+               RAM used:   15 (4%) at main() level
+                           17 (5%) worst case
                Stack used: 1 locations (0 in main + 1 for interrupts)
                Stack size: 8
 
 *
 0000:  MOVLW  00
 0001:  MOVWF  0A
-0002:  GOTO   089
+0002:  GOTO   092
 0003:  NOP
 0004:  MOVWF  7F
 0005:  SWAPF  03,W
@@ -80,28 +80,29 @@ To obtain a fully enabled compiler visit www.ccsinfo.com/products
 .................... 
 .................... #use delay(clock=8867238)
 *
-006F:  MOVLW  2C
-0070:  MOVWF  04
-0071:  BCF    03.7
-0072:  MOVF   00,W
-0073:  BTFSC  03.2
-0074:  GOTO   083
-0075:  MOVLW  02
-0076:  MOVWF  78
-0077:  CLRF   77
+0069:  MOVLW  2B
+006A:  MOVWF  04
+006B:  BCF    03.7
+006C:  MOVF   00,W
+006D:  BTFSC  03.2
+006E:  GOTO   07D
+006F:  MOVLW  02
+0070:  MOVWF  78
+0071:  CLRF   77
+0072:  DECFSZ 77,F
+0073:  GOTO   072
+0074:  DECFSZ 78,F
+0075:  GOTO   071
+0076:  MOVLW  DF
+0077:  MOVWF  77
 0078:  DECFSZ 77,F
 0079:  GOTO   078
-007A:  DECFSZ 78,F
-007B:  GOTO   077
-007C:  MOVLW  DF
-007D:  MOVWF  77
-007E:  DECFSZ 77,F
-007F:  GOTO   07E
-0080:  NOP
-0081:  DECFSZ 00,F
-0082:  GOTO   075
+007A:  NOP
+007B:  DECFSZ 00,F
+007C:  GOTO   06F
+007D:  RETURN
 .................... #fuses HS,NOWDT
-.................... int outs = 1;  //preset to start process
+.................... 
 .................... long delay ;
 .................... int prep = 0;
 .................... #int_CCP1
@@ -123,26 +124,26 @@ To obtain a fully enabled compiler visit www.ccsinfo.com/products
 .................... 
 ....................    if (prep == 1){
 003A:  BCF    03.5
-003B:  DECFSZ 2A,W
+003B:  DECFSZ 29,W
 003C:  GOTO   051
 ....................    for (delay = 0; delay <361; delay++);
-003D:  CLRF   29
-003E:  CLRF   28
-003F:  MOVF   29,W
+003D:  CLRF   28
+003E:  CLRF   27
+003F:  MOVF   28,W
 0040:  SUBLW  01
 0041:  BTFSS  03.0
 0042:  GOTO   04D
 0043:  BTFSS  03.2
 0044:  GOTO   049
-0045:  MOVF   28,W
+0045:  MOVF   27,W
 0046:  SUBLW  68
 0047:  BTFSS  03.0
 0048:  GOTO   04D
-0049:  INCF   28,F
+0049:  INCF   27,F
 004A:  BTFSC  03.2
-004B:  INCF   29,F
+004B:  INCF   28,F
 004C:  GOTO   03F
-....................     output_bit(PIN_D0,0); 
+....................    output_bit(PIN_D0,0); 
 004D:  BCF    08.0
 004E:  BSF    03.5
 004F:  BCF    08.0
@@ -150,22 +151,22 @@ To obtain a fully enabled compiler visit www.ccsinfo.com/products
 ....................    }
 ....................    
 ....................    if (prep == 0){
-0051:  MOVF   2A,F
+0051:  MOVF   29,F
 0052:  BTFSS  03.2
 0053:  GOTO   065
-....................    for (delay = 0; delay <100; delay++);
-0054:  CLRF   29
-0055:  CLRF   28
-0056:  MOVF   29,F
+....................    for (delay = 0; delay <230; delay++);
+0054:  CLRF   28
+0055:  CLRF   27
+0056:  MOVF   28,F
 0057:  BTFSS  03.2
 0058:  GOTO   061
-0059:  MOVF   28,W
-005A:  SUBLW  63
+0059:  MOVF   27,W
+005A:  SUBLW  E5
 005B:  BTFSS  03.0
 005C:  GOTO   061
-005D:  INCF   28,F
+005D:  INCF   27,F
 005E:  BTFSC  03.2
-005F:  INCF   29,F
+005F:  INCF   28,F
 0060:  GOTO   056
 ....................     output_bit(PIN_D0,0);
 0061:  BCF    08.0
@@ -183,55 +184,68 @@ To obtain a fully enabled compiler visit www.ccsinfo.com/products
 .................... 
 .................... void main()
 *
-0089:  MOVF   03,W
-008A:  ANDLW  1F
-008B:  MOVWF  03
-008C:  MOVLW  01
-008D:  MOVWF  27
-008E:  CLRF   2A
-008F:  BSF    03.5
-0090:  BSF    1F.0
-0091:  BSF    1F.1
-0092:  BSF    1F.2
-0093:  BCF    1F.3
-0094:  BCF    03.7
+0092:  MOVF   03,W
+0093:  ANDLW  1F
+0094:  MOVWF  03
+0095:  CLRF   29
+0096:  BSF    03.5
+0097:  BSF    1F.0
+0098:  BSF    1F.1
+0099:  BSF    1F.2
+009A:  BCF    1F.3
+009B:  BCF    03.7
 .................... {
 ....................    setup_timer_1(T1_INTERNAL|T1_DIV_BY_1); //timer1 enabled, instruction clock / 1
-0095:  MOVLW  85
-0096:  BCF    03.5
-0097:  MOVWF  10
-....................    setup_ccp1(CCP_COMPARE_INT); //set CCP1 to cause an interrupt on match
-0098:  MOVLW  0A
-0099:  MOVWF  17
-....................    enable_interrupts(INT_CCP1);  //unmask Timer2 match interrupt
-009A:  BSF    03.5
-009B:  BSF    0C.2
-....................    enable_interrupts(global);    //enabled all unmasked interrupts
-009C:  MOVLW  C0
+009C:  MOVLW  85
 009D:  BCF    03.5
-009E:  IORWF  0B,F
-....................    
+009E:  MOVWF  10
+....................    setup_ccp1(CCP_COMPARE_INT); //set CCP1 to cause an interrupt on match
+009F:  MOVLW  0A
+00A0:  MOVWF  17
+....................    enable_interrupts(INT_CCP1);  //unmask Timer2 match interrupt
+00A1:  BSF    03.5
+00A2:  BSF    0C.2
+....................    enable_interrupts(global);    //enabled all unmasked interrupts
+00A3:  MOVLW  C0
+00A4:  BCF    03.5
+00A5:  IORWF  0B,F
+....................  
 ....................    if(1) prepping();
-009F:  GOTO   069
+00A6:  GOTO   07E
 .................... 
 .................... }
 .................... 
-00A0:  SLEEP
+00A7:  SLEEP
 .................... void prepping(){
 .................... 
 .................... prep = 1;
 *
-0069:  MOVLW  01
-006A:  MOVWF  2A
+007E:  MOVLW  01
+007F:  MOVWF  29
 .................... 
-.................... delay_ms(600);
-006B:  MOVLW  03
-006C:  MOVWF  2B
-006D:  MOVLW  C8
-006E:  MOVWF  2C
-*
-0083:  DECFSZ 2B,F
-0084:  GOTO   06D
+.................... delay_ms(6000);
+0080:  MOVLW  18
+0081:  MOVWF  2A
+0082:  MOVLW  FA
+0083:  MOVWF  2B
+0084:  CALL   069
+0085:  DECFSZ 2A,F
+0086:  GOTO   082
+.................... 
+.................... prep = 0;
+0087:  CLRF   29
+.................... 
+.................... delay_ms(6000);
+0088:  MOVLW  18
+0089:  MOVWF  2A
+008A:  MOVLW  FA
+008B:  MOVWF  2B
+008C:  CALL   069
+008D:  DECFSZ 2A,F
+008E:  GOTO   08A
+008F:  BCF    0A.3
+0090:  BCF    0A.4
+0091:  GOTO   0A7 (RETURN)
 .................... 
 .................... //void pompmotor_aan();
 .................... 
@@ -239,11 +253,7 @@ To obtain a fully enabled compiler visit www.ccsinfo.com/products
 .................... 
 .................... //void pompmotor_uit();
 .................... 
-.................... prep = 0;
-0085:  CLRF   2A
-0086:  BCF    0A.3
-0087:  BCF    0A.4
-0088:  GOTO   0A0 (RETURN)
+.................... 
 .................... 
 .................... }
 .................... 
