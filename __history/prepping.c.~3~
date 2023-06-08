@@ -12,7 +12,7 @@ TCCP1_isr()
  // tijd per puls is 1 / 2216809  = 0,45 microsec  (   44336 * 0,45 microsec = 20 milliseconden
    output_bit(PIN_D0, 1);  //output bit to pin
    output_bit(PIN_D1, 1);  //output bit to pin
-   for (delay = 0; delay <361; delay++); // 361 voor onder pomp - 230 voor startpositie
+   for (delay = 0; delay <200; delay++);
     output_bit(PIN_D0,0);  
    for (delay = 0; delay <100; delay++);
     output_bit(PIN_D1,0);
@@ -25,8 +25,7 @@ void main()
    setup_ccp1(CCP_COMPARE_INT); //set CCP1 to cause an interrupt on match
    enable_interrupts(INT_CCP1);  //unmask Timer2 match interrupt
    enable_interrupts(global);    //enabled all unmasked interrupts
-   while(TRUE)
-   {
-   }
+   while(1);     //main does nothing
+
 }
 

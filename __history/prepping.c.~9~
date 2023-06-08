@@ -1,23 +1,30 @@
-//prepping
+//prepping test programma
 
 #include <16F877.h>
 #use delay(clock=8867238)
 #fuses HS,NOWDT
 int outs = 1;  //preset to start process
 long delay ;
+int prep = 0;
 #int_CCP1
 TCCP1_isr()
 {
    CCP_1 = CCP_1 + 44336;      //increment compare counter 8.867238Mhz/4  =  2.2168095 Mhz
  // tijd per puls is 1 / 2216809  = 0,45 microsec  (   44336 * 0,45 microsec = 20 milliseconden
    output_bit(PIN_D0, 1);  //output bit to pin
-   output_bit(PIN_D1, 1);  //output bit to pin
-   for (delay = 0; delay <361; delay++); // 361 voor onder pomp - 230 voor startpositie
-    output_bit(PIN_D0,0);  
+
+   if (prep == 1){
+   for (delay = 0; delay <361; delay++);
+    output_bit(PIN_D0,0); 
+   }
+   
+   if (prep == 0){
    for (delay = 0; delay <100; delay++);
-    output_bit(PIN_D1,0);
+    output_bit(PIN_D0,0);
+   }
 }
 
+void prepping();
 
 void main()
 {
@@ -25,8 +32,24 @@ void main()
    setup_ccp1(CCP_COMPARE_INT); //set CCP1 to cause an interrupt on match
    enable_interrupts(INT_CCP1);  //unmask Timer2 match interrupt
    enable_interrupts(global);    //enabled all unmasked interrupts
-   while(TRUE)
-   {
-   }
+   
+   if(1) prepping();
+
+}
+
+void prepping(){
+
+prep = 1;
+
+delay_ms(600);
+
+//void pompmotor_aan();
+
+//delay_ms(6000);
+
+//void pompmotor_uit();
+
+prep = 0;
+
 }
 
