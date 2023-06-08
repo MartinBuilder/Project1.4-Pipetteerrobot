@@ -5,7 +5,8 @@
 #include "Prepping.c"
 #use delay(clock=8867238)
 #fuses HS,NOWDT
-
+int HoeVaakGedrukt;
+int inputKnop;
 int outs = 1;  //preset to start process
 long delay;
 
@@ -33,7 +34,26 @@ void main()
    setup_ccp1(CCP_COMPARE_INT); //set CCP1 to cause an interrupt on match
    enable_interrupts(INT_CCP1);  //unmask Timer2 match interrupt
    enable_interrupts(global);    //enabled all unmasked interrupts
- 
-   if(TRUE) prepping();
+  
+   output_a(0x00);
+   output_b(0x00);
+   
+   while(TRUE)
+   {
+      if(input(PIN_A1))
+      {
+         HoeVaakGedrukt++;
+         if(HoeVaakGedrukt == 0)
+         {
+            prepping();
+         }
+         else if(HoeVaakGedrukt == 1)
+         {
+            // voer functie hoofprogramma uit
+            HoeVaakGedrukt = 0;
+         }
+         delay_ms(1000);
+      }
+   }
 }
 
