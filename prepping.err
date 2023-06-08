@@ -1,0 +1,8 @@
+Compiling C:\Users\702274\Downloads\LIB_ULN2803A\ULN2803A\KiCad\Project 1.4\Code\Project1.4-Pipetteerrobot\prepping on 08-Jun-23 at 12:20
+>>> Warning 208 "C:\Users\702274\Downloads\LIB_ULN2803A\ULN2803A\KiCad\Project 1.4\Code\Project1.4-Pipetteerrobot\prepping.c" Line 10(1,10): Function not void and does not return a value  TCCP1_isr
+>>> Warning 203 "C:\Users\702274\Downloads\LIB_ULN2803A\ULN2803A\KiCad\Project 1.4\Code\Project1.4-Pipetteerrobot\prepping.c" Line 40(1,1): Condition always TRUE
+>>> Warning 203 "C:\Users\702274\Downloads\LIB_ULN2803A\ULN2803A\KiCad\Project 1.4\Code\Project1.4-Pipetteerrobot\prepping.c" Line 50(1,1): Condition always TRUE
+>>> Warning 203 "C:\Users\702274\Downloads\LIB_ULN2803A\ULN2803A\KiCad\Project 1.4\Code\Project1.4-Pipetteerrobot\prepping.c" Line 54(1,1): Condition always TRUE
+      Memory usage:   ROM=2%      RAM=4% - 5%
+      0 Errors,  4 Warnings.
+Build Successful.

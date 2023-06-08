@@ -13,10 +13,10 @@ Stack size: 8
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-   81    32 100  prepping.c
+   75    32 100  prepping.c
   676     0   0  ..\..\..\..\..\..\..\..\..\Program Files (x86)\PICCDEMO\Devices\16F877.h
 ----- -----
-  757    32 Total
+  751    32 Total
 
 Page ROM  %  RAM    Vol Diff  Functions:
 ---- --- --- ---    --- ----  ----------

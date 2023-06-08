@@ -11,7 +11,7 @@ Type=4
 1=prepping.c
 
 [defines]
-buildcount=21
+buildcount=22
 
 [ProjectLog]
 Days=2
@@ -42,7 +42,7 @@ D2_L11=[42263]Stopped Editing.
 
 [Opened Files]
 1=prepping.c
-t1=1
+t1=42
 Count=1
 
 [fileformats]
