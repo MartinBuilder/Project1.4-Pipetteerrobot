@@ -1,10 +1,5 @@
-#include <16F877A.h>
-#include <stdio.h>
-#use delay(clock=8867238)
-#fuses HS,NOWDT
-
-//#include "MotorManager.h"
-
+//This manages the Relay for the DC engines and the Pneumatiek.
+#include "MotorManager.h"
 void motor1Right(){
    output_bit( PIN_B5, 0);
    output_bit( PIN_B4, 1);//motor 1 Rechtsom
@@ -41,33 +36,4 @@ void pneumatiekOn(){
 
 void pneumatiekOff(){
    output_bit( PIN_A4, 0);//hydraulish systeem stoppen
-}
-
-void main(void){
-   while(1){
-      motor1Right();
-      delay_ms(2000);
-      motor1Off();
-      delay_ms(1000);     
-         
-      motor1Left();
-      delay_ms(2000);
-      motor1Off();
-      delay_ms(1000);  
-      
-      motor2Right();
-      delay_ms(2000);
-      motor2Off();
-      delay_ms(1000);    
-         
-      motor2Left();
-      delay_ms(2000);
-      motor2Off();
-      delay_ms(1000);
-      
-      pneumatiekOn();
-      delay_ms(2000);
-      pneumatiekOff();
-      delay_ms(1000);
-   }
 }
