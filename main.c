@@ -3,8 +3,8 @@
 #use delay(clock=8867238)
 #fuses HS,NOWDT
 
-//#include "MotorManager.h"
-
+#include "MotorManager.h"
+/*
 void motor1Right(){
    output_bit( PIN_B5, 0);
    output_bit( PIN_B4, 1);//motor 1 Rechtsom
@@ -41,7 +41,7 @@ void pneumatiekOn(){
 
 void pneumatiekOff(){
    output_bit( PIN_A4, 0);//hydraulish systeem stoppen
-}
+}*/
 
 void main(void){
    while(1){
