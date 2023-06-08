@@ -27,8 +27,6 @@ TCCP1_isr()
    }
 }
 
-//void prepping();
-
 void main()
 {
    setup_timer_1(T1_INTERNAL|T1_DIV_BY_1); //timer1 enabled, instruction clock / 1
