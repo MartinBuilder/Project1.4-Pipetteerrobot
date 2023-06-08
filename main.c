@@ -64,4 +64,3 @@ void pompmotor_uit(){
    output_bit( pin_B4, 1);
    output_bit( pin_B5, 1);
 }
-
