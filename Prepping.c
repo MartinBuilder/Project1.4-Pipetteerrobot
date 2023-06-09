@@ -6,11 +6,12 @@ int prep = 0;
 
 void prepping()
 {
+   pneumatiekOff();
    prep = 1;
    delay_ms(500);
-   if(TRUE) motor1Left();
+   motor1Left();
    delay_ms(10000);
-   if(TRUE) motor1Off();
+   motor1Off();
    delay_ms(500);
    prep = 0;
    delay_ms(2000);
