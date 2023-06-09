@@ -1,30 +1,22 @@
-#inculde "Interface.h"
+#include "Interface.h"
+#use delay(clock=8867238)
 
-int Sum(int a, int b)
+int HoeVaakGedrukt = 0;
+
+void ScanBlack()
 {
-   return a+b;
-}
-
-int Zwarteknop()
-{
-
-input_b(2);
-   return 1;
-   
-
-}
-
-int Kliksensor()
-{
-
-}
-
-int LSreservoir()
-{
-
-}
-
-int LSbuisjes()
-{
-
+   if(input(PIN_A1))
+   {
+      HoeVaakGedrukt++;
+      if(HoeVaakGedrukt == 0)
+      {
+         prepping();
+      }
+      else if(HoeVaakGedrukt == 1)
+      {
+         // voer functie hoofprogramma uit
+         HoeVaakGedrukt = 0;
+      }
+      delay_ms(1000);
+   }
 }

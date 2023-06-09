@@ -3,11 +3,11 @@
 #include "MotorManager.c"
 #include "Prepping.h"
 #include "Prepping.c"
+#include "Interface.h"
+#include "Interface.c"
 #use delay(clock=8867238)
 #fuses HS,NOWDT
-int HoeVaakGedrukt;
-int inputKnop;
-int outs = 1;  //preset to start process
+//int HoeVaakGedrukt;
 long delay;
 
 #int_CCP1
@@ -35,11 +35,15 @@ void main()
    enable_interrupts(INT_CCP1);  //unmask Timer2 match interrupt
    enable_interrupts(global);    //enabled all unmasked interrupts
   
-   output_a(0x00);
-   output_b(0x00);
+   if(TRUE) ScanBlack();
+   //output_a(0x00);
+   //output_b(0x00);
    
-   while(TRUE)
+   /*while(TRUE)
    {
+      //prep = 0;
+      //delay_ms(5000);
+      //prep = 1;
       if(input(PIN_A1))
       {
          HoeVaakGedrukt++;
@@ -54,6 +58,6 @@ void main()
          }
          delay_ms(1000);
       }
-   }
+   }*/
 }
 
