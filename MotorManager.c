@@ -31,9 +31,9 @@ void motor2Left(){
 }  
 
 void pneumatiekOn(){
-   output_bit( PIN_A2, 1);//hydraulish systeem aan
+   output_bit( PIN_A2, 1);//hydraulish systeem stoppen
 }
 
 void pneumatiekOff(){
-   output_bit( PIN_A2, 0);//hydraulish systeem stoppen
+   output_bit( PIN_A2, 0);//hydraulish systeem Uitzetten
 }

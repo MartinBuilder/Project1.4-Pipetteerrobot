@@ -5,6 +5,7 @@
 #include "Prepping.c"
 #use delay(clock=8867238)
 #fuses HS,NOWDT
+
 int LichtGaten;
 long delay;
 
@@ -24,6 +25,7 @@ void TCCP1_isr(void)
    {
       motor2Off();
    }
+   
    for (delay = 0; delay <360; delay++);
    output_bit(PIN_D0,0); 
    }
@@ -51,7 +53,7 @@ void main()
          prepping();
          LichtGaten = 0;
       }
-      if(input(PIN_A1))
+      else if(input(PIN_A1))
       {  
          LichtGaten = 0;
          While(!input(PIN_B1))
@@ -63,34 +65,30 @@ void main()
          {
             if(!input(PIN_A0))
             {
-                  motor2Off();
-                  motor1Left();
-                  delay_ms(1000);
-                  motor1Off();
-                  pneumatiekOn();
-                  delay_ms(200);
-                  motor1Left();
-                  delay_ms(1000);
-                  motor1Off();
-                  pneumatiekOff();
-                  if(LichtGaten < 7)
-                  {
-                     motor2Left();
-                     delay_ms(500);
-                  }
-                  else
-                  {
-                     While(!input(PIN_B1))
-                     {
-                        motor2Right();
-                     }
-                     motor2Off();
-                  }
-                  LichtGaten++;
+               motor2Off();
+               fill();
+               pneumatiekOn();
+               delay_ms(100);
+               fill();
+               pneumatiekOff();
+               if(LichtGaten < 7)
+               {
+                  motor2Left();
+                  delay_ms(500);
                }
+               else
+               {
+                  While(!input(PIN_B1))
+                  {
+                     motor2Right();
+                  }
+                  motor2Off();
+               }
+               LichtGaten++;
             }
          }
-         delay_ms(500);
       }
+      delay_ms(500);
+   }
 }
 
