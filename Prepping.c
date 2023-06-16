@@ -7,6 +7,8 @@ int LichtGatenPomp = 0;
 
 void prepping()
 {
+   output_bit(PIN_C1, 1);//Rood
+   output_bit(PIN_C0, 0);//Groen
    pneumatiekOff();
    prep = 1;
    delay_ms(500);
@@ -19,7 +21,8 @@ void prepping()
    delay_ms(100);
    pneumatiekOff();
    prep = 0;
-   delay_ms(2000);
+   output_bit(PIN_C1, 0);//Rood
+   output_bit(PIN_C0, 1);//Groen
 }
 
 void fill()

@@ -46,6 +46,9 @@ void main()
    output_a(0x00);
    output_c(0x00);
    
+   output_bit(PIN_C1, 0);//Rood
+   output_bit(PIN_C0, 1);//Groen
+   
    while(TRUE)
    {
       if(input(PIN_C3))
@@ -55,6 +58,9 @@ void main()
       }
       else if(input(PIN_A1))
       {  
+         output_bit(PIN_C1, 1);//Rood
+         output_bit(PIN_C0, 0);//Groen
+         
          LichtGaten = 0;
          While(!input(PIN_B1))
          {
@@ -87,6 +93,8 @@ void main()
                LichtGaten++;
             }
          }
+         output_bit(PIN_C1, 0);//Rood
+         output_bit(PIN_C0, 1);//Groen
       }
       delay_ms(500);
    }
